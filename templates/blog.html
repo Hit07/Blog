@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog website:cosmos</title>
+</head>
+<body>
+    {% for i in posts: %}
+        {%if i['id']==2 %}
+        <h1>{{ i["title"] }}</h1>
+        <h3>{{ i["subtitle"] }}</h3>
+        {%endif%}
+    {% endfor %}
+</body>
+</html>

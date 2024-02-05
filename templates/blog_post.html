@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog {{val}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        {%for i in data:%}
+
+        {%if i['id']== val %}
+        <div class="title"><h1>{{i["title"]}}</h1></div>
+    </div>
+        <div class="content">
+        <div class="card">
+        <h2><b>{{i['subtitle']}}</b></h2>
+        <p>{{i['body']}}</p>
+        {%endif%}
+        {%endfor%}
+        </div>
+
+    </div>
+</div>
+</body>
+<footer>
+    <p>Copyright © {{curr_date}} Hitesh Narayana</p>
+</footer>
+</html>
